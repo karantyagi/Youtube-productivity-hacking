@@ -1,3 +1,3 @@
 # Youtube-productivity-hacking
 
-> Analyze how you waste your time on youtube to make your 'youtubing' a productive experience
+> Analyze where you invest your time on Youtube. Make 'youtubing' a productive experience.
