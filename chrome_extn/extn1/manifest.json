@@ -1,21 +1,20 @@
-    {
-    "name": "Youtube history analysis",
-    "description" : "Base Level Extension",
-    "version": "1.0",
-    "manifest_version": 2,
-    "browser_action": {
-      "default_popup": "hello.html",
-      "default_icon": "icon1.png",
+{
+	"manifest_version": 2,
 
-	"commands": {
-      "_execute_browser_action": {
-        "suggested_key": {
-          "default": "Ctrl+Shift+F",
-          "mac": "MacCtrl+Shift+F"
-        },
-        "description": "Opens hello.html"
-      }
-    }
-  
-    }
-  }
+	"name": "Youtube Analyzer Plugin",
+	"description": "This extension will analyze your youtube activity",
+	"version": "1.0",
+
+	"browser_action": {
+		"default_icon": "icon1.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"activeTab"
+	],
+	"content_scripts": [{
+		"js": ["js/jquery.min.js", "custom.js", "js/popper.min.js","js/highcharts.js", "js/bootstrap.min.js", "js/bootstrap.min.css", "js/loader.js", "js/bootstrap.min.css"],
+		"matches": ["http://*/*", "https://*/*"]
+
+	}]
+}

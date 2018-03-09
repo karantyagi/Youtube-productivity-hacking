@@ -1,0 +1,109 @@
+<!-- <!doctype html>
+
+<html>
+<head>
+  <title>Youtube Analyzer</title>
+  <script src="popup.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<h2>Youtube Analyzer</h2>
+<p>If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="js/bootstrap.min.css">
+  <script src="Chart.bundle.js"></script>
+  <script src="utils.js"></script>
+  <style>
+  canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  </style>
+
+
+
+
+</head>
+<body>
+
+<div class="container">
+
+<div>
+    <div id="canvas-holder" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
+      <canvas id="chart-area"></canvas>
+    </div>
+
+    <button id="randomizeData">Randomize Data</button>
+    <button id="addDataset">Add Dataset</button>
+    <button id="removeDataset">Remove Dataset</button>
+    <button id="addData">Add Data</button>
+    <button id="removeData">Remove Data</button>
+</div>
+
+<div class="row">
+
+   <div id="container-c" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+</div>
+ <div class="row">
+   <div class="col-md-6">
+     <ul class="nav nav-tabs">
+       <li class="nav-item">
+         <a class="nav-link active" data-toggle="tab" href="#today">Today</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" data-toggle="tab" href="#week">Week</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" data-toggle="tab" href="#month">Month</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" data-toggle="tab" href="#threemonth">3 Month</a>
+       </li>
+
+     </ul>
+     <div id="myTabContent" class="tab-content col-md-12">
+       <div class="tab-pane fade show active" id="today">
+         <div id="piechartToday" style="width: 400px; height: 300px;"></div>
+       </div>
+       <div class="tab-pane fade" id="week">
+         <div id="piechartWeek" style="width: 400px; height: 300px;"></div>
+       </div>
+       <div class="tab-pane fade" id="month">
+         <div id="piechartMonth" style="width: 400px; height: 300px;"></div>
+       </div>
+       <div class="tab-pane fade" id="threemonth">
+         <div id="piechartThreeMonth" style="width: 400px; height: 300px;"></div>
+       </div>
+       <div class="tab-pane fade" id="settings">
+         <h2>Settings tab</h2>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/exporting.js"></script>
+<script src="popup.js"></script>
+
+</body>
+</html>
